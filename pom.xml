@@ -1,4 +1,5 @@
 <!-- Datei: pom.xml -->
+
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -10,8 +11,7 @@
     <version>1.0.0</version>
 
     <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <java.version>21</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -24,11 +24,6 @@
         <repository>
             <id>auxilor</id>
             <url>https://repo.auxilor.io/repository/maven-public/</url>
-        </repository>
-
-        <repository>
-            <id>magmaguy</id>
-            <url>https://repo.magmaguy.com/releases</url>
         </repository>
     </repositories>
 
@@ -51,14 +46,16 @@
         <dependency>
             <groupId>com.magmaguy</groupId>
             <artifactId>EliteMobs</artifactId>
-            <version>9.0.0</version>
-            <scope>provided</scope>
+            <version>10.5.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/EliteMobs-10.5.0.jar</systemPath>
         </dependency>
 
     </dependencies>
 
     <build>
         <plugins>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -67,6 +64,7 @@
                     <release>21</release>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 

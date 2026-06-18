@@ -48,7 +48,7 @@
             <artifactId>EliteMobs</artifactId>
             <version>10.5.0</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/EliteMobs-10.5.0.jar</systemPath>
+            <systemPath>${project.basedir}/libs/EliteMobs.jar</systemPath>
         </dependency>
 
     </dependencies>

@@ -32,7 +32,7 @@ public class EliteMobsHook implements Listener {
         
         int level = event.getEliteEntity().getLevel();
         int xpPerLevel = plugin.getConfigManager().getConfig().getInt("xp.elitemobs.boss-kill-per-level", 5);
-        int totalXp = level * xpPerLevel;
+        int totalXp = level xpPerLevel;
         
         plugin.getTeamManager().addXp(team, totalXp, "EliteMobs Boss");
     }

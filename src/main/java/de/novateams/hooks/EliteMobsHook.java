@@ -1,3 +1,5 @@
+// Datei: src/main/java/de/novateams/hooks/EliteMobsHook.java
+
 package de.novateams.hooks;
 
 import com.magmaguy.elitemobs.api.EliteMobDeathEvent;
@@ -7,6 +9,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+
+import java.util.Map;
 
 public class EliteMobsHook implements Listener {
 
@@ -23,7 +27,14 @@ public class EliteMobsHook implements Listener {
     @EventHandler
     public void onEliteMobDeath(EliteMobDeathEvent event) {
 
-        if (!(event.getEliteEntity().getDamagers().getTopDamager() instanceof Player player)) {
+        Player player = event.getEliteEntity().getDamagers()
+                .entrySet()
+                .stream()
+                .max(Map.Entry.comparingByValue())
+                .map(Map.Entry::getKey)
+                .orElse(null);
+
+        if (player == null) {
             return;
         }
 

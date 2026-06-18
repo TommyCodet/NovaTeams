@@ -1,0 +1,29 @@
+name: NovaTeams
+version: '${project.version}'
+main: de.novateams.NovaTeams
+api-version: '1.21'
+authors:
+  - NovaTeams
+description: Umfangreiches Team-Plugin mit Level-System, Backpack und Claims
+softdepend:
+  - AuraSkills
+  - EliteMobs
+
+commands:
+  team:
+    description: Hauptbefehl für Teams
+    usage: /team <subcommand>
+    aliases:
+      - t
+      - teams
+
+permissions:
+  novateams.use:
+    description: Erlaubt die Nutzung des Team-Systems
+    default: true
+  novateams.admin:
+    description: Admin-Berechtigungen
+    default: op
+  novateams.bypass.claims:
+    description: Umgeht alle Claim-Beschränkungen
+    default: op

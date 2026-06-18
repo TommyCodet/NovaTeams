@@ -1,0 +1,189 @@
+# NovaTeams Konfiguration
+
+# Nachrichten
+messages:
+  prefix: "&8[&6NovaTeams&8] &7"
+  team-created: "&aDas Team &e%team% &awurde erfolgreich erstellt!"
+  team-deleted: "&cDas Team wurde gelöscht."
+  team-already-exists: "&cEin Team mit diesem Namen existiert bereits."
+  team-not-found: "&cDieses Team wurde nicht gefunden."
+  already-in-team: "&cDu bist bereits in einem Team."
+  not-in-team: "&cDu bist in keinem Team."
+  no-permission: "&cDu hast keine Berechtigung dafür."
+  player-invited: "&e%player% &awurde zum Team eingeladen."
+  invite-received: "&aDu wurdest zum Team &e%team% &aeingeladen. Nutze &e/team join %team%"
+  joined-team: "&aDu bist dem Team &e%team% &abeigetreten!"
+  left-team: "&cDu hast das Team verlassen."
+  player-kicked: "&e%player% &cwurde aus dem Team gekickt."
+  player-promoted: "&e%player% &awurde zu &e%role% &abefördert."
+  player-demoted: "&e%player% &cwurde zu &e%role% &cdegradiert."
+  chunk-claimed: "&aDieser Chunk wurde geclaimed!"
+  chunk-unclaimed: "&cDer Claim wurde entfernt."
+  chunk-already-claimed: "&cDieser Chunk ist bereits geclaimed."
+  chunk-not-claimed: "&cDieser Chunk ist nicht geclaimed."
+  max-claims-reached: "&cMaximale Anzahl an Claims erreicht!"
+  cannot-interact-claim: "&cDu kannst hier nicht interagieren - geschütztes Gebiet!"
+  xp-gained: "&a+%xp% Team-XP! &7(%source%)"
+  level-up: "&6&lLEVEL UP! &eDein Team ist jetzt Level &6%level%&e!"
+  backpack-upgraded: "&aTeam-Backpack wurde auf &e%slots% Slots &aerweitert!"
+
+# Team-Einstellungen
+team:
+  max-name-length: 16
+  min-name-length: 3
+  max-members: 50
+  invite-timeout: 300 # Sekunden
+
+# Level-System
+levels:
+  # XP benötigt für jedes Level (Level -> XP)
+  requirements:
+    1: 0
+    2: 100
+    3: 250
+    4: 500
+    5: 1000
+    6: 1750
+    7: 2750
+    8: 4000
+    9: 5500
+    10: 7500
+    11: 10000
+    12: 13000
+    13: 16500
+    14: 20500
+    15: 25000
+    16: 30000
+    17: 36000
+    18: 43000
+    19: 51000
+    20: 60000
+
+# XP-Quellen
+xp:
+  # Spieler-Kills
+  player-kill: 50
+  
+  # Mob-Kills
+  mobs:
+    ZOMBIE: 2
+    SKELETON: 2
+    CREEPER: 3
+    SPIDER: 2
+    ENDERMAN: 5
+    BLAZE: 4
+    GHAST: 5
+    WITHER_SKELETON: 6
+    PIGLIN_BRUTE: 5
+    RAVAGER: 15
+    EVOKER: 10
+    VINDICATOR: 6
+    WITCH: 5
+    GUARDIAN: 4
+    ELDER_GUARDIAN: 25
+    SHULKER: 8
+    PHANTOM: 4
+    DROWNED: 2
+    HUSK: 2
+    STRAY: 2
+    PILLAGER: 4
+    HOGLIN: 6
+    ZOGLIN: 6
+    PIGLIN: 3
+    WARDEN: 100
+    ENDER_DRAGON: 500
+    WITHER: 300
+  
+  # Erze abbauen
+  ores:
+    COAL_ORE: 1
+    DEEPSLATE_COAL_ORE: 1
+    IRON_ORE: 2
+    DEEPSLATE_IRON_ORE: 2
+    COPPER_ORE: 1
+    DEEPSLATE_COPPER_ORE: 1
+    GOLD_ORE: 3
+    DEEPSLATE_GOLD_ORE: 3
+    NETHER_GOLD_ORE: 2
+    REDSTONE_ORE: 2
+    DEEPSLATE_REDSTONE_ORE: 2
+    LAPIS_ORE: 3
+    DEEPSLATE_LAPIS_ORE: 3
+    DIAMOND_ORE: 10
+    DEEPSLATE_DIAMOND_ORE: 10
+    EMERALD_ORE: 8
+    DEEPSLATE_EMERALD_ORE: 8
+    NETHER_QUARTZ_ORE: 2
+    ANCIENT_DEBRIS: 25
+  
+  # Advancements
+  advancements:
+    default: 15
+    special:
+      "minecraft:story/enter_the_nether": 25
+      "minecraft:story/enter_the_end": 50
+      "minecraft:end/kill_dragon": 200
+      "minecraft:nether/summon_wither": 50
+      "minecraft:adventure/kill_all_mobs": 150
+      "minecraft:husbandry/bred_all_animals": 100
+  
+  # Biom-Entdeckung (erstes Mal)
+  biome-discovery: 10
+  
+  # Spielzeit (pro Stunde)
+  playtime-per-hour: 5
+  
+  # Chunk-Claim
+  chunk-claim: 3
+  
+  # AuraSkills Integration
+  auraskills:
+    level-up: 10
+  
+  # EliteMobs Integration
+  elitemobs:
+    boss-kill-per-level: 5  # XP pro Boss-Level
+
+# Backpack-Größen
+backpack:
+  sizes:
+    1: 9      # Level 1: 9 Slots
+    5: 18     # Level 5: 18 Slots
+    10: 27    # Level 10: 27 Slots
+    20: 54    # Level 20: 54 Slots
+
+# Claim-Limits
+claims:
+  max-per-level:
+    1: 5      # Level 1: 5 Claims
+    5: 20     # Level 5: 20 Claims
+    10: 50    # Level 10: 50 Claims
+    20: 100   # Level 20: 100 Claims
+  
+  # Geschützte Aktionen
+  protection:
+    block-break: true
+    block-place: true
+    container-access: true
+    door-interaction: true
+    button-lever: true
+    redstone: true
+    entity-damage: true
+    item-frame: true
+    armor-stand: true
+
+# GUI-Einstellungen
+gui:
+  main-menu:
+    title: "&8Team: &6%team%"
+  members:
+    title: "&8Mitglieder - &6%team%"
+  backpack:
+    title: "&8Team-Backpack &7(Level %level%)"
+  claims:
+    title: "&8Claims - &6%team%"
+
+# Performance
+performance:
+  cache-cleanup-interval: 300  # Sekunden
+  async-save-interval: 60      # Sekunden

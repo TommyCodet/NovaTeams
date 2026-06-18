@@ -1,3 +1,4 @@
+<!-- Datei: pom.xml -->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -24,6 +25,11 @@
             <id>auxilor</id>
             <url>https://repo.auxilor.io/repository/maven-public/</url>
         </repository>
+
+        <repository>
+            <id>magmaguy</id>
+            <url>https://repo.magmaguy.com/releases</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -40,25 +46,19 @@
             <artifactId>auraskills-api-bukkit</artifactId>
             <version>2.0.0</version>
             <scope>provided</scope>
-            <optional>true</optional>
         </dependency>
 
-        <!-- Vorübergehend deaktiviert -->
-        <!--
         <dependency>
             <groupId>com.magmaguy</groupId>
             <artifactId>EliteMobs</artifactId>
             <version>9.0.0</version>
             <scope>provided</scope>
-            <optional>true</optional>
         </dependency>
-        -->
 
     </dependencies>
 
     <build>
         <plugins>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -67,7 +67,6 @@
                     <release>21</release>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
 
